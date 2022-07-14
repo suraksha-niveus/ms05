@@ -2,9 +2,9 @@
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
-env:
-   ORDER_HISTORY_API_ENDPOINT: "https://order-history/api"
-   PAYMENT_SOLUTION_API_ENDPOINT: "https://payment-solution/api"
+# env:
+#    ORDER_HISTORY_API_ENDPOINT: "https://order-history/api"
+#    PAYMENT_SOLUTION_API_ENDPOINT: "https://payment-solution/api"
 
 replicaCount: 1
 
