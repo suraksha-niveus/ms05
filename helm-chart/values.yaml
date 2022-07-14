@@ -1,44 +1,22 @@
-replicaCount: 1
-image:
-  repository: nginx
-  pullPolicy: IfNotPresent
-  tag: ""
-imagePullSecrets: []
-nameOverride: ""
-fullnameOverride: ""
-serviceAccount:
-  create: true
-  annotations: {}
-  name: ""
-podAnnotations: {}
-podSecurityContext: {}
-securityContext: {}
-service:
-  type: ClusterIP
-  port: 80
-ingress:
-  enabled: false
-  className: ""
-  annotations: {}
-  hosts:
-    - host: chart-example.local
-      paths:
-        - path: /
-          pathType: ImplementationSpecific
-  tls: []
- 
 
-resources: {}
-  
-autoscaling:
-  enabled: false
-  minReplicas: 1
-  maxReplicas: 100
-  targetCPUUtilizationPercentage: 80
-  
 
-nodeSelector: {}
 
-tolerations: []
+### Global Values if any ###
+global: {}
 
-affinity: {}
+### Sub Charts Specific Values ###
+# Portal
+node01:
+  enabled: true
+  image:
+    version:
+# Customer Management
+python01:
+  enabled: true
+  image:
+    version:
+# Product Catalog
+gradle-sample-app:
+  enabled: true
+  image:
+    version:
