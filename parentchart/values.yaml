@@ -1,21 +1,21 @@
 ### Global Values if any ###
 global: {}
 
+images:
 
 node01:
   enabled: true
-  image:
-  repository: surakshaniveus/ms-node01
+  repository: surakshaniveus/ms-node01:01
     version:
 
 python01:
   enabled: true
   image: 
-  repository: surakshaniveus/ms-python01
+  repository: surakshaniveus/ms-python01:01
     version:
 
 gradle01:
   enabled: true
   image: 
-  repository: surakshaniveus/ms-java01
+  repository: surakshaniveus/ms-java01:01
     version:
