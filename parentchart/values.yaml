@@ -5,19 +5,19 @@ images:
 
 node01:
   enabled: true
-  repository: surakshaniveus/ms-node01
-  tag: "01"
+  repository: surakshaniveus/ms-node01:01
+  # tag: "01"
    
 
 python01:
   enabled: true
   image: 
-  repository: surakshaniveus/ms-python01
-  tag: "01"
+  repository: surakshaniveus/ms-python01:01
+  # tag: "01"
   
 gradle01:
   enabled: true
   image: 
-  repository: surakshaniveus/ms-java01
-  tag: "01"
+  repository: surakshaniveus/ms-java01:01
+  # tag: "01"
  
