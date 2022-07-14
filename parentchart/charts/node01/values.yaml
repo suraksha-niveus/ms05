@@ -4,9 +4,9 @@
 
 replicaCount: 1
 
-# image: 
-#   repository: 
-#   pullPolicy: IfNotPresent
+image: 
+  repository: surakshaniveus/ms-node01
+  pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   # tag: ""
 
