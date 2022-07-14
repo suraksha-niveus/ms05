@@ -7,18 +7,17 @@ node01:
   enabled: true
   repository: surakshaniveus/ms-node01
   tag: "01"
-    version:
+   
 
 python01:
   enabled: true
   image: 
   repository: surakshaniveus/ms-python01
   tag: "01"
-    version:
-
+  
 gradle01:
   enabled: true
   image: 
   repository: surakshaniveus/ms-java01
   tag: "01"
-    version:
+ 
