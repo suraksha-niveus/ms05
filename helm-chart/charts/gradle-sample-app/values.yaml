@@ -1,0 +1,69 @@
+gradle-sample-app:
+global:
+  # enabled is the master enabled switch. Setting this to true or false
+  # will enable or disable all the components within this chart by default.
+  enabled: true
+  # Used to define custom django.fullname in template.
+  projectName: "helm-chart"
+  # image sets the repo,tag and pullPolicy of the project
+  image:
+  repository: surakshaniveus/ms-java01
+  pullPolicy: Always
+  # Overrides the image tag whose default is the chart appVersion.
+  tag: "02"
+
+deployment:
+
+  # Run migrations at re-deploy?
+  migrations: 
+    enabled: true
+
+  # Run collectstatic at re-deploy?
+  collectstatic: 
+    enabled: true
+  
+  # Kubernetes secrets pulled on pod creation
+  secretName: ""
+
+  replicaCount: 1
+  
+  resources: {}
+  # resources:
+  #   requests:
+  #     memory: 256Mi
+  #     cpu: 250m
+  #   limits:
+  #     memory: 256Mi
+  #     cpu: 250m
+    
+  ingress:
+    enabled: false
+    
+    annotations: |
+      kubernetes.io/tls-acme: "true"
+    hosts:
+      - host: helm-chart.com
+        paths:
+          - /gradle-sample-app
+          
+
+    tls:
+      enabled: true
+
+  service:
+    enabled: true
+    type: LoadBalancer
+   
+    port: 8080
+    targetPort: 8080
+# Default values for gradle-sample-app.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+
+
+
+ 
+
+
+
