@@ -4,15 +4,15 @@ global: {}
 
 node01:
   enabled: true
-  image:
+  image: surakshaniveus/ms-node01
     version:
 
 python01:
   enabled: true
-  image:
+  image: surakshaniveus/ms-python01
     version:
 
 gradle01:
   enabled: true
-  image:
+  image: surakshaniveus/ms-java01
     version:
