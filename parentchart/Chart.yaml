@@ -16,7 +16,7 @@ dependencies:
   repository: file://charts/python01
   version: 0.1.0
   condition: python01.enabled
-- name: gradle-sample-app
-  repository: file://charts/gradle-sample-app
+- name: gradle01
+  repository: file://charts/gradle01
   version: 0.1.0
-  condition: gradle-sample-app.enabled
+  condition: gradle01.enabled

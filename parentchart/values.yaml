@@ -12,7 +12,7 @@ python01:
   image:
     version:
 
-gradle-sample-app:
+gradle01:
   enabled: true
   image:
     version:
