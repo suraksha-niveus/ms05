@@ -1,7 +1,7 @@
 ### Global Values if any ###
 global: {}
 
-dev:
+# dev:
 
 node01:
   enabled: true
@@ -22,47 +22,47 @@ gradle01:
     repository: surakshaniveus/ms-java01
     tag: "01"
  
-qa:
+# qa:
 
-node01:
-  enabled: true
-  image:
-    repository: surakshaniveus/ms-node01
-    tag: "03"
+# node01:
+#   enabled: true
+#   image:
+#     repository: surakshaniveus/ms-node01
+#     tag: "03"
    
 
-python01:
-  enabled: true
-  image: 
-    repository: surakshaniveus/ms-python01
-    tag: "01"
+# python01:
+#   enabled: true
+#   image: 
+#     repository: surakshaniveus/ms-python01
+#     tag: "01"
   
-gradle01:
-  enabled: true
-  image: 
-    repository: surakshaniveus/ms-java01
-    tag: "01"
+# gradle01:
+#   enabled: true
+#   image: 
+#     repository: surakshaniveus/ms-java01
+#     tag: "01"
 
 
-prod:
+# prod:
 
 
 
-node01:
-  enabled: true
-  image:
-    repository: surakshaniveus/ms-node01
-    tag: "03"
+# node01:
+#   enabled: true
+#   image:
+#     repository: surakshaniveus/ms-node01
+#     tag: "03"
    
 
-python01:
-  enabled: true
-  image: 
-    repository: surakshaniveus/ms-python01
-    tag: "01"
+# python01:
+#   enabled: true
+#   image: 
+#     repository: surakshaniveus/ms-python01
+#     tag: "01"
   
-gradle01:
-  enabled: true
-  image: 
-    repository: surakshaniveus/ms-java01
-    tag: "01"
+# gradle01:
+#   enabled: true
+#   image: 
+#     repository: surakshaniveus/ms-java01
+#     tag: "01"
