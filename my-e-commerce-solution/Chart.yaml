@@ -1,0 +1,22 @@
+apiVersion: v2
+name: my-e-commerce-solution
+description: A Parent Helm chart for Kubernetes
+type: application
+# This is the chart version. This version number should be incremented each time you make changes
+# to the chart and its templates
+version: 0.1.0
+# All E-Commerce micro-services Helm Charts that are needed
+# versions needs to be changed, whenever corresponding the sub chart versions are changing
+dependencies:
+- name: python01
+  repository: file://charts/python01
+  version: 0.1.0
+  condition:  python01.enabled
+- name: node01
+  repository: file://charts/node01
+  version: 0.1.0
+  condition: node01.enabled
+- name: gradle-sample-app
+  repository: file://charts/gradle-sample-app
+  version: 0.1.0
+  condition: gradle-sample-app.enabled

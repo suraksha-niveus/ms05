@@ -1,0 +1,19 @@
+### Global Values if any ###
+global: {}
+
+### Sub Charts Specific Values ###
+# python01
+python01:
+  enabled: true
+  image:
+    version:
+# node01
+node01:
+  enabled: true
+  image:
+    version:
+# gradle-sample-app
+gradle-sample-app:
+  enabled: true
+  image:
+    version:
