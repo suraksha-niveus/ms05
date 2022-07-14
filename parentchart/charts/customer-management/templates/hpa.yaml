@@ -2,14 +2,14 @@
 apiVersion: autoscaling/v2beta1
 kind: HorizontalPodAutoscaler
 metadata:
-  name: {{ include "gradle-sample-app.fullname" . }}
+  name: {{ include "customer-management.fullname" . }}
   labels:
-    {{- include "gradle-sample-app.labels" . | nindent 4 }}
+    {{- include "customer-management.labels" . | nindent 4 }}
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
     kind: Deployment
-    name: {{ include "gradle-sample-app.fullname" . }}
+    name: {{ include "customer-management.fullname" . }}
   minReplicas: {{ .Values.autoscaling.minReplicas }}
   maxReplicas: {{ .Values.autoscaling.maxReplicas }}
   metrics:

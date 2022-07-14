@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "gradle-sample-app.fullname" . }}
+  name: {{ include "order-management.fullname" . }}
   labels:
-    {{- include "gradle-sample-app.labels" . | nindent 4 }}
+    {{- include "order-management.labels" . | nindent 4 }}
 spec:
 {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
 {{- end }}
   selector:
     matchLabels:
-      {{- include "gradle-sample-app.selectorLabels" . | nindent 6 }}
+      {{- include "order-management.selectorLabels" . | nindent 6 }}
   template:
     metadata:
     {{- with .Values.podAnnotations }}
@@ -18,13 +18,13 @@ spec:
         {{- toYaml . | nindent 8 }}
     {{- end }}
       labels:
-        {{- include "gradle-sample-app.selectorLabels" . | nindent 8 }}
+        {{- include "order-management.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
         {{- toYaml . | nindent 8 }}
       {{- end }}
-      serviceAccountName: {{ include "gradle-sample-app.serviceAccountName" . }}
+      serviceAccountName: {{ include "order-management.serviceAccountName" . }}
       securityContext:
         {{- toYaml .Values.podSecurityContext | nindent 8 }}
       containers:
@@ -33,6 +33,11 @@ spec:
             {{- toYaml .Values.securityContext | nindent 12 }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: ORDER_HISTORY_API_ENDPOINT
+              value: {{ include "global.order-history.url" . | default .Values.env.ORDER_HISTORY_API_ENDPOINT }}
+            - name: PAYMENT_SOLUTION_API_ENDPOINT
+              value: {{ include "global.payment-solution.url" . | default .Values.env.PAYMENT_SOLUTION_API_ENDPOINT }}
           ports:
             - name: http
               containerPort: 80

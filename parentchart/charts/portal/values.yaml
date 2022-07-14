@@ -1,6 +1,11 @@
-# Default values for node01.
+# Default values for portal.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
+
+env:
+  PRODUCT_CATALOG_API_ENDPOINT: "https://product-catalog/api"
+  CUSTOMER_MANAGEMENT_API_ENDPOINT: "https://customer-management/api"
+  ORDER_MANAGEMENT_API_ENDPOINT: "https://order-management/api"
 
 replicaCount: 1
 
